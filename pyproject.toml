@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "sc_chat"
+version = "0.1.0"
+description = ""
+authors = ["zczqas <limbusanchar76@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = "^0.115.14"
+uvicorn = {extras = ["standard"], version = "^0.35.0"}
+SQLAlchemy = "^2.0.41"
+pydantic = "^2.11.7"
+python-dotenv = "^1.1.1"
+black = "^25.1.0"
+flake8 = "^7.3.0"
+mypy = "^1.16.1"
+isort = "^6.0.1"
+psycopg2-binary = "^2.9.10"
+asyncpg = "^0.30.0"
+python-multipart = "^0.0.20"
+alembic = "^1.16.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
