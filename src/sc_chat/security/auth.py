@@ -9,13 +9,11 @@ from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 from starlette import status
 
-from src.sc_chat.database.conn import get_db
-from src.sc_chat.utils.common.exception import (
-    InvalidCredentialsException,
-    UserNotFoundException,
-)
-from src.sc_chat.models.user import User
 from src.sc_chat.core.config import settings
+from src.sc_chat.database.conn import get_db
+from src.sc_chat.models.user import User
+from src.sc_chat.utils.common.exception import (InvalidCredentialsException,
+                                                UserNotFoundException)
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")
 

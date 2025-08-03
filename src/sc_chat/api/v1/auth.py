@@ -9,8 +9,8 @@ from starlette import status
 from src.sc_chat.database.conn import get_db
 from src.sc_chat.models.user import User
 from src.sc_chat.repository.auth_repository import AuthRepository
+from src.sc_chat.schemas.user import RefreshTokenRequest, UserSignup
 from src.sc_chat.security.auth import jwt_service
-from src.sc_chat.schemas.user import UserSignup, RefreshTokenRequest
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 

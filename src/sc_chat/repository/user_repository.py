@@ -1,5 +1,6 @@
+from typing import List, Optional
+
 from src.sc_chat.models.user import User
-from typing import Optional, List
 
 
 class UserRepository:
