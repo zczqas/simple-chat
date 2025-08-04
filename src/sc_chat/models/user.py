@@ -1,6 +1,7 @@
 from sqlalchemy import Boolean, Column
 from sqlalchemy import Enum as SQLAlchemyEnum
 from sqlalchemy import String
+from sqlalchemy.orm import relationship
 
 from src.sc_chat.database.base import Base
 from src.sc_chat.models.base import TimestampMixin
@@ -24,3 +25,6 @@ class User(Base, TimestampMixin):
         default=UserRoleEnum.USER,
         nullable=False,
     )
+
+    # Relationships
+    messages = relationship("Message", back_populates="user")
